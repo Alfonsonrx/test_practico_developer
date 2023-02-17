@@ -55,3 +55,7 @@ Recordatorio: Para ingresar se requiere super usuario, se puede crear uno con el
 ```
 py .\manage.py createsuperuser
 ```
+
+# Nota Final
+Por cuestiones de tiempo, realice esto la mitad del tiempo dispuesto en las instrucciones, por lo que asumo que no logre de momento realizar vistas con 
+la informacion en bootstrap 5, a pesar de ser opcional estaba en mi objetivo cumplirlo tambien
