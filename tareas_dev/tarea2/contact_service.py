@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from decimal import Decimal
 import json
 from datetime import datetime
 import os 
@@ -12,8 +11,8 @@ def get_data():
     driver.implicitly_wait(1)
     driver.maximize_window()
     
-    n_pages=driver.find_elements(By.XPATH,"//select[@name='pagina_offset']/option")[-1].text
-    # n_pages = 1
+    # n_pages=driver.find_elements(By.XPATH,"//select[@name='pagina_offset']/option")[-1].text
+    n_pages = 70
     
     tabla={"proyectos":[]}
     
@@ -32,7 +31,7 @@ def get_data():
             fila['region'] = td[3].text
             fila['tipologia'] = td[4].text
             fila['titular'] = td[5].text
-            fila['inversion'] = float(td[6].text.replace('.',' ').replace(',','.'))
+            fila['inversion'] = float(td[6].text.replace('.','').replace(',','.'))
             fila['fecha_ingreso'] = fecha
             fila['estado'] = td[8].text
             tabla['proyectos'].append(fila)
